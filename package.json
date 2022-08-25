@@ -14,6 +14,12 @@
     "vite-plugin-solid": "^2.3.0"
   },
   "dependencies": {
-    "solid-js": "^1.4.8"
+    "@hope-ui/solid": "^0.6.7",
+    "@stitches/core": "^1.2.8",
+    "dexie": "^3.2.2",
+    "nanoid": "^4.0.0",
+    "solid-dexie": "^0.0.5",
+    "solid-js": "^1.4.8",
+    "solid-transition-group": "^0.0.10"
   }
 }

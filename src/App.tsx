@@ -1,19 +1,19 @@
 import type {Component} from 'solid-js';
 
-import {createSignal} from 'solid-js';
+import {Container, Heading, Divider} from '@hope-ui/solid';
+
+import Todos from './Todos';
 
 const App: Component = () => {
-  const [counter, setCounter] = createSignal<number>(2);
-
-  const increment = () => setCounter((prev) => prev + 1);
-  const decrement = () => setCounter((prev) => prev - 1);
 
   return (
-    <div>
-      <p>{counter()}</p>
-      <button onClick={increment}>Inc</button>
-      <button onClick={decrement}>Dec</button>
-    </div>
+    <Container py="$4">
+      <Heading level="1" size="5xl" color="$primary8" textAlign="center" mb="$4">
+        TODOS - PWA
+      </Heading>
+      <Divider mb="$4" />
+      <Todos />
+    </Container>
   );
 }
 
