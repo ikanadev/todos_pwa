@@ -7,7 +7,7 @@ import Todos from './Todos';
 const App: Component = () => {
 
   return (
-    <Container py="$4">
+    <Container py="$4" px="$2">
       <Heading level="1" size="5xl" color="$primary8" textAlign="center" mb="$4">
         TODOS - PWA
       </Heading>

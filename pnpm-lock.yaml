@@ -1,4 +1,4 @@
-lockfileVersion: 5.3
+lockfileVersion: 5.4
 
 specifiers:
   '@hope-ui/solid': ^0.6.7
@@ -13,7 +13,7 @@ specifiers:
   vite-plugin-solid: ^2.3.0
 
 dependencies:
-  '@hope-ui/solid': 0.6.7_94b39928342523d8973304bce21e7256
+  '@hope-ui/solid': 0.6.7_sszzskbueur5rfztas6oehtsky
   '@stitches/core': 1.2.8
   dexie: 3.2.2
   nanoid: 4.0.0
@@ -360,7 +360,7 @@ packages:
       '@floating-ui/core': 0.6.2
     dev: false
 
-  /@hope-ui/solid/0.6.7_94b39928342523d8973304bce21e7256:
+  /@hope-ui/solid/0.6.7_sszzskbueur5rfztas6oehtsky:
     resolution: {integrity: sha512-7zGGy4QbGUC7QhwRnNH8HO0MZFg4jFISlC2cnAMBfFBy272uqQN3PYdTjiIbnpR/4JilUfxCWpFQY+4qslqcIw==}
     peerDependencies:
       '@stitches/core': ^1.2.8
@@ -893,7 +893,6 @@ packages:
 
   /solid-js/1.4.8:
     resolution: {integrity: sha512-XErZdnnYYXF7OwGSUAPcua2y5/ELB/c53zFCpWiEGqxTNoH1iQghzI8EsHJXk06sNn+Z/TGhb8bPDNNGSgimag==}
-    dev: false
 
   /solid-refresh/0.4.1_solid-js@1.4.8:
     resolution: {integrity: sha512-v3tD/OXQcUyXLrWjPW1dXZyeWwP7/+GQNs8YTL09GBq+5FguA6IejJWUvJDrLIA4M0ho9/5zK2e9n+uy+4488g==}
