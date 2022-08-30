@@ -1,40 +1,32 @@
 import type {Component, JSX} from 'solid-js';
-import type {ITodo} from './store';
+import type {ITodo} from './store/types';
 
-import {createSignal, createEffect, For, Show} from 'solid-js';
+import {createSignal, For, Show} from 'solid-js';
 import {nanoid} from 'nanoid';
 import {createDexieArrayQuery} from 'solid-dexie';
 
 import {Input, Button, Box, Heading, Flex} from '@hope-ui/solid';
 
 import Todo from './Todo';
+import {addTodo} from './store/todo';
 import {db} from './store';
 
 const Todos: Component = () => {
   const [text, setText] = createSignal('');
   const [isLoading, setIsLoading] = createSignal(false);
   const todos = createDexieArrayQuery(() => db.todos.toArray());
-  console.log(todos);
 
   const handleSubmit: JSX.EventHandlerUnion<HTMLFormElement, Event & {submitter: HTMLElement}> = (e) => {
     e.preventDefault();
     if (text().trim() === '') return;
-    const newTodo: ITodo = {
-      id: nanoid(),
-      text: text().trim(),
-      checked: false,
-    };
+    const newTodo: ITodo = {id: nanoid(), text: text().trim(), checked: false};
     setIsLoading(true);
-    db.todos.add(newTodo).then((resp) => {
+    addTodo(newTodo).then(() => {
       setIsLoading(false);
       setText('');
-      console.log(text(), ' saved!', resp);
+      console.log(text(), ' saved!');
     });
   };
-
-  createEffect(() => {
-    console.log('Working with: ', todos);
-  });
 
   return (
     <>

@@ -1,8 +1,8 @@
 import type {Component, JSX} from 'solid-js';
-import type {ITodo} from './store';
+import type {ITodo} from './store/types';
 
-import {createSignal, createEffect} from 'solid-js';
-import {db} from './store';
+import {createSignal} from 'solid-js';
+import {updateTodo, deleteTodo} from './store/todo';
 
 import {Flex, Checkbox, IconButton} from '@hope-ui/solid';
 import XMark from './components/icons/XMark';
@@ -13,7 +13,7 @@ const Todo: Component<{todo: ITodo}> = (props) => {
 
   const handleCheck: JSX.EventHandlerUnion<HTMLInputElement, Event> = (e) => {
     setIsCheckLoading(true);
-    db.todos.update(props.todo.id, {checked: e.currentTarget.checked}).then(() => {
+    updateTodo(props.todo.id, 'checked', e.currentTarget.checked).then(() => {
       setIsCheckLoading(false);
       console.log('Updated: ', props.todo.id);
     });
@@ -21,14 +21,11 @@ const Todo: Component<{todo: ITodo}> = (props) => {
 
   const handleDelete: JSX.EventHandlerUnion<HTMLButtonElement, MouseEvent> = () => {
     setIsDeleteLoading(true);
-    db.todos.delete(props.todo.id).then(() => {
+    deleteTodo(props.todo.id).then(() => {
+      setIsDeleteLoading(false);
       console.log('Deleted: ', props.todo.id);
     });
   };
-
-  createEffect(() => {
-    console.log('Receiving: ', props.todo);
-  });
 
   return (
     <Flex>
