@@ -11,6 +11,7 @@
   "devDependencies": {
     "typescript": "^4.6.4",
     "vite": "^3.0.7",
+    "vite-plugin-pwa": "^0.12.3",
     "vite-plugin-solid": "^2.3.0"
   },
   "dependencies": {
@@ -20,6 +21,8 @@
     "nanoid": "^4.0.0",
     "solid-dexie": "^0.0.5",
     "solid-js": "^1.4.8",
-    "solid-transition-group": "^0.0.10"
+    "solid-transition-group": "^0.0.10",
+    "workbox-precaching": "^6.5.4",
+    "workbox-window": "^6.5.4"
   }
 }

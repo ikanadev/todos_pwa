@@ -3,6 +3,7 @@ import type {Component} from 'solid-js';
 import {Container, Heading, Divider} from '@hope-ui/solid';
 
 import Todos from './Todos';
+import ReloadPrompt from './ReloadPrompt';
 
 const App: Component = () => {
 
@@ -13,6 +14,7 @@ const App: Component = () => {
       </Heading>
       <Divider mb="$4" />
       <Todos />
+      <ReloadPrompt />
     </Container>
   );
 }

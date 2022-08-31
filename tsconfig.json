@@ -11,6 +11,7 @@
     "types": ["vite/client"],
     "noEmit": true,
     "isolatedModules": true,
+    "lib": ["ESNext", "DOM", "WebWorker"],
 
     "noUnusedLocals": true,
     "noUnusedParameters": true,
