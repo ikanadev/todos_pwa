@@ -14,12 +14,14 @@ precacheAndRoute(self.__WB_MANIFEST);
 
 cleanupOutdatedCaches();
 
+/*
 // const db = new Dexie('test');
 //console.log('Hey');
 //console.log(db);
 //db.version(1).stores({
 //  versions: '++id, value',
 //});
+*/
 
 /*
 setInterval(() => {
