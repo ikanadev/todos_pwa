@@ -1,7 +1,7 @@
 import type {Component, JSX} from 'solid-js';
 import type {ITodo} from './store/types';
 
-import {createSignal, For, Show} from 'solid-js';
+import {createSignal, For} from 'solid-js';
 import {nanoid} from 'nanoid';
 import {createDexieArrayQuery} from 'solid-dexie';
 
