@@ -46,9 +46,6 @@ const Todos: Component = () => {
         <For each={todos}>
           {(todo) => <Todo todo={todo} />}
         </For>
-        <Show when={todos.length === 0}>
-          <Box w="$5" h="$5" bg="teal" />
-        </Show>
       </Flex>
     </>
   );
