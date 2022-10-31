@@ -1,4 +1,4 @@
-import { Html5QrcodeScanner } from "html5-qrcode";
+import { Html5Qrcode } from "html5-qrcode";
 import { Html5QrcodeResult } from "html5-qrcode/esm/core";
 import { Component, onMount } from "solid-js";
 import "../index.css";
@@ -39,12 +39,14 @@ const QRReader: Component = () => {
       console.log(`Scan error: ${errorMessage}`);
     }
 
-    var html5QrcodeScanner = new Html5QrcodeScanner(
-      "reader",
-      { fps: 10, qrbox: 250, supportedScanTypes: [0] },
-      true
+    const html5QrCode = new Html5Qrcode("reader");
+    const config = { fps: 30, qrbox: { width: 250, height: 250 } };
+    html5QrCode.start(
+      { facingMode: "environment" },
+      config,
+      onScanSuccess,
+      onScanError
     );
-    html5QrcodeScanner.render(onScanSuccess, onScanError);
   });
 
   function copyToClipboard(el: HTMLInputElement) {
