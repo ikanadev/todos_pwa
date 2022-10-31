@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "qrpayindia"
+  },
+  "targets": {
+    "qrpayindia": {
+      "hosting": {
+        "user": [
+          "qrpayindia"
+        ]
+      }
+    }
+  }
+}
